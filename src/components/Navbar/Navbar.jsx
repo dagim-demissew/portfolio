@@ -11,25 +11,25 @@ const Navbar = () => {
     <div className="navbar-container">
       <nav className="navbar">
         <Link className="nav-link">
-          <box-icon color="#555" className="nav-link-icon" name="user" />
+          <box-icon color="#111" className="nav-link-icon" name="user" />
           Dagim
         </Link>
         <div className="nav-links">
           <Link className="nav-link">
-            <box-icon color="#555" name="briefcase-alt-2" />
+            <box-icon color="#111" name="briefcase-alt-2" />
             services
           </Link>
           <Link className="nav-link">
-            <box-icon color="#555" className="nav-link-icon" name="layer" />
+            <box-icon color="#111" className="nav-link-icon" name="layer" />
             skills
           </Link>
           <Link className="nav-link">
-            <box-icon color="#555" className="nav-link-icon" name="layout" />
+            <box-icon color="#111" className="nav-link-icon" name="layout" />
             portifolio
           </Link>
           <Link className="nav-link">
             <box-icon
-              color="#555"
+              color="#111"
               className="nav-link-icon"
               name="paper-plane"
             />
@@ -37,7 +37,7 @@ const Navbar = () => {
           </Link>
         </div>
         <Link className="nav-menu-link" onClick={handleToggle}>
-          <box-icon color="#555" name="menu-alt-right" />
+          <box-icon color="#111" name="menu-alt-right" />
           menu
         </Link>
         <div className={`nav-menu ${toggle ? "display" : ""}`}>
@@ -45,20 +45,20 @@ const Navbar = () => {
             <box-icon name="x"></box-icon>
           </Link>
           <Link className="nav-link">
-            <box-icon color="#555" name="briefcase-alt-2" />
+            <box-icon color="#111" name="briefcase-alt-2" />
             services
           </Link>
           <Link className="nav-link">
-            <box-icon color="#555" className="nav-link-icon" name="layer" />
+            <box-icon color="#111" className="nav-link-icon" name="layer" />
             skills
           </Link>
           <Link className="nav-link">
-            <box-icon color="#555" className="nav-link-icon" name="layout" />
+            <box-icon color="#111" className="nav-link-icon" name="layout" />
             portifolio
           </Link>
           <Link className="nav-link">
             <box-icon
-              color="#555"
+              color="#111"
               className="nav-link-icon"
               name="paper-plane"
             />
