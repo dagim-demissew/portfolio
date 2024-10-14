@@ -1,0 +1,93 @@
+.socials {
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: fixed;
+  bottom: 10px;
+  left: 50px;
+  transition: transform 0.3s ease;
+}
+
+.socila-close {
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.rotate {
+  transform: rotate(135deg);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.roll {
+  opacity: 1;
+  transform: scale(1);
+  display: flex;
+}
+
+.social-link {
+  height: 35px;
+  width: 35px;
+  margin-top: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  position: absolute;
+  bottom: -15px;
+}
+
+.social-links.roll .social-link {
+  opacity: 1;
+  transform: translateY(-10px);
+  position: static;
+}
+
+/* Specific background colors */
+.linkedin {
+  background-color: #0077b5;
+}
+
+.whatsup {
+  background-color: #25d366;
+}
+
+.upwork {
+  background-color: black;
+}
+
+.git {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .socials {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+  }
+}
