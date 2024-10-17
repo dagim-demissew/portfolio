@@ -1,0 +1,29 @@
+.portfolio-header {
+  width: 50%;
+  transform: translateY(20px);
+}
+.portfolio-header-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-header-option {
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.portfolio-header-option:hover {
+  color: black;
+}
+
+.option-active {
+  transform: translateY(-5px);
+  background-color: #333;
+  color: white;
+  border-radius: 20px;
+}
+
+.option-active:hover {
+  color: white;
+}

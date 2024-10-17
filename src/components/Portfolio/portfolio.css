@@ -1,0 +1,23 @@
+.portfolio-container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-card-container {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-title-contaier{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio-title{
+  font-weight: 700;
+}

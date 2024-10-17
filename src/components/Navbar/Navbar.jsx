@@ -16,16 +16,16 @@ const Navbar = () => {
         </Link>
         <div className="nav-links">
           <Link className="nav-link">
-            <box-icon color="#111" name="briefcase-alt-2" />
-            services
+            <box-icon color="#111" className="nav-link-icon" name="layout" />
+            portifolio
           </Link>
           <Link className="nav-link">
             <box-icon color="#111" className="nav-link-icon" name="layer" />
             skills
           </Link>
           <Link className="nav-link">
-            <box-icon color="#111" className="nav-link-icon" name="layout" />
-            portifolio
+            <box-icon color="#111" name="briefcase-alt-2" />
+            services
           </Link>
           <Link className="nav-link">
             <box-icon
@@ -37,24 +37,23 @@ const Navbar = () => {
           </Link>
         </div>
         <Link className="nav-menu-link" onClick={handleToggle}>
-          <box-icon color="#111" name="menu-alt-right" />
-          menu
+          <box-icon color="#111" name="menu" />
         </Link>
         <div className={`nav-menu ${toggle ? "display" : ""}`}>
           <Link className="nav-link small-screen" onClick={handleToggle}>
             <box-icon name="x"></box-icon>
           </Link>
           <Link className="nav-link">
-            <box-icon color="#111" name="briefcase-alt-2" />
-            services
+            <box-icon color="#111" className="nav-link-icon" name="layout" />
+            portifolio
           </Link>
           <Link className="nav-link">
             <box-icon color="#111" className="nav-link-icon" name="layer" />
             skills
           </Link>
           <Link className="nav-link">
-            <box-icon color="#111" className="nav-link-icon" name="layout" />
-            portifolio
+            <box-icon color="#111" name="briefcase-alt-2" />
+            services
           </Link>
           <Link className="nav-link">
             <box-icon

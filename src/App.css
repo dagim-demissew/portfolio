@@ -65,6 +65,10 @@ textarea {
   font-size: var(--normal-font-size);
 }
 
+&::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: var(--body-color);
   color: #777;
@@ -99,25 +103,25 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+/* Styling for the sections */
 .section {
+  height: calc(100vh); /* Full viewport minus navbar height */
   padding: 4rem 0 2rem;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.section__title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
+.sections {
+  height: 100vh; 
+  overflow-y: scroll; 
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; 
 }
 
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: 4rem;
-}
-
-.section__title,
-.section__subtitle {
-  text-align: center;
-}
 
 /*=============== LAYOUT ===============*/
 .container {

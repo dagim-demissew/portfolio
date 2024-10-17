@@ -1,9 +1,10 @@
 .navbar-container {
   width: 100%;
   padding-top: 10px;
-  position: sticky;
+  position: fixed;
   top: 0px;
   z-index: 1000;
+  background-color: transparent;
 }
 .navbar {
   padding: 10px;

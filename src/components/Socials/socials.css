@@ -23,6 +23,30 @@
   cursor: pointer;
   transition: transform 0.3s ease;
   z-index: 1000;
+  animation: button_glow 8s ease-in-out infinite 1s;
+}
+
+@keyframes button_glow {
+  0% {
+    box-shadow: 0 2px 15px rgba(109, 13, 227, 0.274),
+      0 0 25px rgba(109, 13, 227, 0.37);
+  }
+  25% {
+    box-shadow: 0 2px 25px rgba(0, 191, 255, 0.562),
+      0 0 30px rgba(0, 191, 255, 0.402);
+  }
+  50% {
+    box-shadow: 0 2px 20px rgba(157, 0, 255, 0.329),
+      0 0 25px rgba(157, 0, 255, 0.4);
+  }
+  75% {
+    box-shadow: 0 2px 25px rgba(0, 191, 255, 0.562),
+      0 0 30px rgba(0, 191, 255, 0.402);
+  }
+  100% {
+    box-shadow: 0 2px 15px rgba(109, 13, 227, 0.274),
+      0 0 25px rgba(109, 13, 227, 0.37);
+  }
 }
 
 .rotate {
@@ -56,6 +80,7 @@
   justify-content: center;
   transform: translateY(30px);
   opacity: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.068);
   transition: transform 0.5s ease, opacity 0.3s ease;
   position: absolute;
   bottom: -15px;

@@ -1,8 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+import HeroDetail from "./components/Hero-Detail/HeroDetail";
 import Socials from "./components/Socials/Socials";
+import Portfolio from "./components/Portfolio/Portfolio.jsx";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact.jsx";
+import Service from "./components/ServiceComponent/Service.jsx";
 import "./App.css";
 
 function App() {
@@ -10,9 +14,13 @@ function App() {
     <>
       <Navbar />
       <Socials />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-      </Routes>
+      <div className="sections">
+        <HeroDetail />
+        <Portfolio />
+        <Skills />
+        <Service />
+        <Contact />
+      </div>
     </>
   );
 }
