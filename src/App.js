@@ -6,7 +6,7 @@ import Socials from "./components/Socials/Socials";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact.jsx";
-import Service from "./components/ServiceComponent/Service.jsx";
+import Service from "./components/Service-Component/Service.jsx";
 import "./App.css";
 
 function App() {

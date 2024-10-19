@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setHeaderCatagory } from "../../redux/card/card-action";
+import { setHeaderCatagory } from "../../redux/Option/option-action";
 import "./portfolioHeader.css";
 
 const PortfolioHeader = () => {
   const dispatch = useDispatch();
-  const activeCatagory = useSelector((state) => state.cards.activeCatagory);
-  const handleOptionClick = (category) => {
-    dispatch(setHeaderCatagory(category));
+  const activeCatagory = useSelector((state) => state.option.activeOption);
+  const handleOptionClick = (option) => {
+    dispatch(setHeaderCatagory(option));
   };
   return (
     <div className="portfolio-header">
@@ -21,9 +22,9 @@ const PortfolioHeader = () => {
         </div>
         <div
           className={`portfolio-header-option ${
-            activeCatagory === "UI/UX" ? "option-active" : ""
+            activeCatagory === "UIUX" ? "option-active" : ""
           }`}
-          onClick={() => handleOptionClick("UI/UX")}>
+          onClick={() => handleOptionClick("UIUX")}>
           UI/UX
         </div>
         <div
@@ -35,11 +36,14 @@ const PortfolioHeader = () => {
         </div>
         <div
           className={`portfolio-header-option ${
-            activeCatagory === "Full stack" ? "option-active" : ""
+            activeCatagory === "Fullstack" ? "option-active" : ""
           }`}
-          onClick={() => handleOptionClick("Full stack")}>
-          Full stack
+          onClick={() => handleOptionClick("Fullstack")}>
+          Fullstack
         </div>
+        <Link className="portfolio-link">
+          <div className="portfolio-header-option">more?</div>
+        </Link>
       </div>
     </div>
   );

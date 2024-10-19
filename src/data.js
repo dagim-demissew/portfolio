@@ -1,4 +1,4 @@
-export const CATAGORY = {
+export const CATEGORIES = {
   Websites: [
     {
       title: "E-Commerce Platform",
@@ -16,10 +16,6 @@ export const CATAGORY = {
       title: "Corporate Site",
       image: "https://via.placeholder.com/200?text=Corporate",
     },
-    {
-      title: "Landing Page",
-      image: "https://via.placeholder.com/200?text=Landing+Page",
-    },
   ],
   Mobile: [
     {
@@ -30,10 +26,7 @@ export const CATAGORY = {
       title: "Fitness Tracker",
       image: "https://via.placeholder.com/200?text=Fitness+Tracker",
     },
-    {
-      title: "E-Wallet App",
-      image: "https://via.placeholder.com/200?text=E-Wallet+App",
-    },
+
     {
       title: "Food Delivery",
       image: "https://via.placeholder.com/200?text=Food+Delivery",
@@ -48,10 +41,7 @@ export const CATAGORY = {
       title: "Mobile App Design",
       image: "https://via.placeholder.com/200?text=Mobile+Design",
     },
-    {
-      title: "Dashboard UI",
-      image: "https://via.placeholder.com/200?text=Dashboard+UI",
-    },
+
     {
       title: "E-Commerce UX",
       image: "https://via.placeholder.com/200?text=E-Commerce+UX",
@@ -73,10 +63,6 @@ export const CATAGORY = {
     {
       title: "Project Management Tool",
       image: "https://via.placeholder.com/200?text=Project+Management+Tool",
-    },
-    {
-      title: "CMS Platform",
-      image: "https://via.placeholder.com/200?text=CMS+Platform",
     },
     {
       title: "Online Marketplace",

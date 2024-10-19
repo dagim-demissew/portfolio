@@ -13,11 +13,63 @@
   justify-content: center;
   align-items: center;
 }
-.portfolio-title-contaier{
+.portfolio-title-contaier {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.portfolio-title{
+.portfolio-title {
   font-weight: 700;
+  background-image: linear-gradient(45deg, #6a5acd, #00bfff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+@media (max-width: 768px) and (min-width: 626px) {
+  .portfolio-container {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .portfolio-card-container {
+    height: 400px;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  .portfolio-title {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 626px) {
+  .portfolio-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .portfolio-card-container {
+    height: 500px;
+    width: 60%;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+  .portfolio-title {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .portfolio-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 407px) {
 }

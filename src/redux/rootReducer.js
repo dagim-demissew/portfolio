@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import cardReducer from "./card/card-reducer";
+import optionReducer from "./Option/option-reducer";
 
 const rootReducer = combineReducers({
-  cards: cardReducer,
+  option: optionReducer,
 });
 
 export default rootReducer;
