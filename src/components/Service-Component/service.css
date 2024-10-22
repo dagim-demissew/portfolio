@@ -1,0 +1,186 @@
+.service-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 50px;
+}
+.service-title {
+  padding: 10px;
+  font-weight: 700;
+  background-image: linear-gradient(45deg, #6a5acd, #00bfff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.service-cards {
+  height: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.service-card {
+  position: relative;
+  width: 220px;
+  height: 250px;
+  padding: 1em 1.5em;
+  color: #fff;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.service-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 60px 60px 0;
+  border-style: solid;
+  border-color: #a3a3a322 #fff;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+  transition: color 0.3s ease-in-out;
+}
+
+.service-card-subtitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #616161;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card-subtitle:hover {
+  color: #333;
+  transition: all 0.3s;
+}
+
+.service-card-subtitle:hover .icon {
+  transform: translateX(5px);
+}
+.service-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow {
+  display: none;
+}
+
+.service-dots {
+  display: none;
+}
+
+@media (max-width: 822px) {
+  .service-container {
+    width: 95%;
+  }
+}
+@media (max-width: 615px) {
+  .service-dots {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-dot {
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    background: #999;
+    border-radius: 50%;
+  }
+  .current-dot {
+    background: #333;
+    transition: all 0.2s ease-in-out;
+  }
+  .arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    &:hover {
+      background: #00000014;
+    }
+    &:active {
+      background: #0000001d;
+    }
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    left: 5px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    right: 5px;
+  }
+  .service-cards {
+    position: relative;
+  }
+
+  .service-card {
+    position: absolute;
+  }
+  .display-service {
+    animation: fadeInService 0.4s ease-in-out;
+  }
+  .remove-service {
+    display: none;
+  }
+}
+@keyframes fadeInService {
+  from {
+    opacity: 0;
+    display: none;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    display: flex;
+    transform: translateY(0px);
+  }
+}

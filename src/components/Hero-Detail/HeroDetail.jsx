@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useRef } from "react";
+import portfolioImage from "../../assets/dagimPortfolio.jpg";
 import Typed from "typed.js";
 import { Link } from "react-router-dom";
 import "./heroDetail.css";
@@ -26,7 +27,7 @@ const HeroDetail = () => {
         <div className="hero-content">
           <div className="hero-detail-container">
             <div className="hero-image-container">
-              <img className="hero-image" src="" />
+              <img className="hero-image" src={portfolioImage} />
             </div>
             <div className="hero-detail">
               <h1 className="home-title">
@@ -41,7 +42,9 @@ const HeroDetail = () => {
                 earum dolor maxime nostrum delectus pariatur eum ratione,
                 quisquam quasi illum, ipsam amet.
               </p>
-              <Link className="home-link">Inbox ?</Link>
+              <Link className="home-link">
+                Resume <box-icon name="download" color="white"></box-icon>
+              </Link>
             </div>
           </div>
         </div>

@@ -14,12 +14,19 @@
 }
 
 .hero-image-container {
+  background-image: linear-gradient(
+    45deg,
+    rgba(106, 90, 205, 0.15),
+    rgba(0, 191, 255, 0.15)
+  );
   height: 300px;
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: background__animate 19s infinite 1s;
 }
 .hero-image {
   height: 300px;
@@ -40,37 +47,55 @@
 @keyframes profile__animate {
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    transform: scale(1);
     background-color: #f0f0f0;
   }
   25% {
     border-radius: 50% 50% 40% 60% / 50% 50% 40% 60%;
-    transform: scale(1.01);
     background-color: #e0e0e0;
   }
   50% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    transform: scale(1);
     background-color: #d0d0d0;
   }
   75% {
     border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
-    transform: scale(1.01);
     background-color: #e0e0e0;
   }
   100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    transform: scale(1);
     background-color: #f0f0f0;
   }
 }
+@keyframes background__animate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: border-radius 4s ease;
+  }
+  25% {
+    border-radius: 70% 30% 50% 50% / 50% 70% 40% 60%;
+    transition: border-radius 4s ease;
+  }
+  50% {
+    border-radius: 80% 20% 40% 60% / 65% 35% 55% 45%;
+    transition: border-radius 4s ease;
+  }
+  75% {
+    border-radius: 50% 50% 60% 40% / 60% 40% 70% 30%;
+    transition: border-radius 4s ease;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: border-radius 4s ease;
+  }
+}
+
 
 .gradient-text {
   background-image: linear-gradient(45deg, #6a5acd, #00bfff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 42px;
   font-weight: bold;
   margin: 0;
@@ -100,6 +125,9 @@ br {
   color: white;
   width: 100px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
 }
 .home-link:hover {
   background-color: #333333b2;

@@ -1,0 +1,42 @@
+.project-container {
+  width: 100vw;
+  height: 100%;
+  transform: translateY(85px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+.project-title {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-list {
+  width: 90%;
+  height: 400px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-cards {
+  margin: 10px;
+  width: 200px;
+  height: 250px;
+  background-color: #949494;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.project-card-image {
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: #fff;
+}

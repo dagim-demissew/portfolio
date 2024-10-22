@@ -25,11 +25,11 @@ const Socials = () => {
             <box-icon name="upwork" color="white" type="logo"></box-icon>
           </Link>
         </div>
-        <Link
+        <span
           className={`socila-close ${toggle ? "rotate" : ""}`}
           onClick={handleToggle}>
-          <box-icon name="shape-square" color="white" />
-        </Link>
+          <box-icon name="shape-square" color="#333" />
+        </span>
       </div>
     </>
   );

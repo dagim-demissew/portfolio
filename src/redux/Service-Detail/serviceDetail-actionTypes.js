@@ -1,0 +1,4 @@
+export const serviceDetailActions = {
+  OPEN_SERVICE_DETAIL: "OPEN_SERVICE_DETAIL",
+  CLOSE_SERVICE_DETAIL: "CLOSE_SERVICE_DETAIL",
+};

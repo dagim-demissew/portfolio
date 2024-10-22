@@ -19,9 +19,10 @@
   width: 40%;
   margin: 20px;
   height: 300px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
   font-weight: 600;
+
   color: #111;
   text-align: center;
 }
@@ -98,8 +99,8 @@
     border-radius: 40px;
     padding: 14px;
     margin-top: 8px;
-    background-color: #333;
-    color: white;
+    background-color: #222;
+    color: rgb(220, 220, 220);
     width: 100px;
     text-align: center;
   }
@@ -113,7 +114,7 @@
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    pointer-events: none; 
+    pointer-events: none;
   }
   .list-item-text {
     font-size: 12px;

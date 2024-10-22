@@ -74,3 +74,72 @@ export const CATEGORIES = {
     },
   ],
 };
+
+export const SERVICES = {
+  uiux: [
+    {
+      id: "1",
+      detail: "User Research & Personas",
+    },
+    {
+      id: "2",
+      detail: "Wireframing & Prototyping",
+    },
+    {
+      id: "3",
+      detail: "Cross-Browser Compatibility",
+    },
+    {
+      id: "4",
+      detail: "Performance Optimization",
+    },
+    {
+      id: "5",
+      detail: "Visual Design & Branding",
+    },
+  ],
+  Frontend: [
+    {
+      id: "1",
+      detail: "Responsive Web Design",
+    },
+    {
+      id: "2",
+      detail: "Single Page Application (SPA) Development",
+    },
+    {
+      id: "3",
+      detail: "Interaction Design",
+    },
+    {
+      id: "4",
+      detail: "Usability Testing",
+    },
+    {
+      id: "5",
+      detail: "Frontend Testing & Debugging",
+    },
+  ],
+  Backend: [
+    {
+      id: "1",
+      detail: "API Development & Integration",
+    },
+    {
+      id: "2",
+      detail: "Database Design & Management",
+    },
+    {
+      id: "3",
+      detail: "Server-Side Logic Implementation",
+    },
+    {
+      id: "4",
+      detail: "Authentication & Authorization",
+    },
+    {
+      id: "5",
+      detail: "Data Storage & Security",
+    },
+  ],
+};
