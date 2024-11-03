@@ -11,7 +11,10 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
-const middleWares = [logger];
+const middleWares = [];
+if (process.env.REACT_APP_NODE_ENV === "development") {
+  middleWares.push(logger);
+}
 const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) => {
