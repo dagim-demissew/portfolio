@@ -117,6 +117,15 @@ const Skills = () => {
                     Mongo DB <span className="skill-level">Advanced</span>
                   </span>
                 </li>
+                <li className="list-item">
+                  <box-icon
+                    type="solid"
+                    color="#444"
+                    name="check-circle"></box-icon>
+                  <span className="list-item-text">
+                    Firebase <span className="skill-level">Basics</span>
+                  </span>
+                </li>
               </ul>
             </div>
           </div>

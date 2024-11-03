@@ -1,0 +1,93 @@
+.Admin-service-display {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+ 
+}
+
+.Admin-service-display_item {
+  background: rgba(209, 209, 209, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Admin-service-display_item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Admin-service-display_title {
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #333;
+  font-weight: 700;
+}
+
+.Admin-service-display_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.Admin-service-display_detail {
+  padding: 10px 20px;
+  list-style: none;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s;
+}
+
+.Admin-service-display_detail:hover {
+  background: #f0f4fa;
+}
+
+.Admin-service-display-detail_main {
+  flex: 1;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.Admin-service-display-detail_delete {
+  display: flex;
+  align-items: center;
+}
+
+.link-delete {
+  color: #ff4d4f;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.link-delete:hover {
+  background: #ffeaea;
+  color: #d90429;
+  text-decoration: none;
+}
+
+/* Icons adjustment */
+.Admin-service-display_detail box-icon {
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 20px;
+}
+
+@media (max-width: 611px) {
+  .Admin-service-display_detail {
+    flex-direction: column;
+    padding: 15px;
+  }
+}

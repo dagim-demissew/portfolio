@@ -10,31 +10,31 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <nav className="navbar">
-        <Link className="nav-link">
+        <a href="#hero" className="nav-link">
           <box-icon color="#111" className="nav-link-icon" name="user" />
           Dagim
-        </Link>
+        </a>
         <div className="nav-links">
-          <Link className="nav-link">
+          <a className="nav-link" href="#portfolio">
             <box-icon color="#111" className="nav-link-icon" name="layout" />
             portifolio
-          </Link>
-          <Link className="nav-link">
+          </a>
+          <a href="#skills" className="nav-link">
             <box-icon color="#111" className="nav-link-icon" name="layer" />
             skills
-          </Link>
-          <Link className="nav-link">
+          </a>
+          <a href="#services" className="nav-link">
             <box-icon color="#111" name="briefcase-alt-2" />
             services
-          </Link>
-          <Link className="nav-link">
+          </a>
+          <a href="#contact" className="nav-link">
             <box-icon
               color="#111"
               className="nav-link-icon"
               name="paper-plane"
             />
             contact
-          </Link>
+          </a>
         </div>
         <Link className="nav-menu-link" onClick={handleToggle}>
           <box-icon color="#111" name="menu" />
@@ -43,26 +43,26 @@ const Navbar = () => {
           <Link className="nav-link small-screen" onClick={handleToggle}>
             <box-icon name="x"></box-icon>
           </Link>
-          <Link className="nav-link">
+          <a className="nav-link" href="#portfolio">
             <box-icon color="#111" className="nav-link-icon" name="layout" />
             portifolio
-          </Link>
-          <Link className="nav-link">
+          </a>
+          <a href="#skills" className="nav-link">
             <box-icon color="#111" className="nav-link-icon" name="layer" />
             skills
-          </Link>
-          <Link className="nav-link">
+          </a>
+          <a href="#services" className="nav-link">
             <box-icon color="#111" name="briefcase-alt-2" />
             services
-          </Link>
-          <Link className="nav-link">
+          </a>
+          <a href="#contact" className="nav-link">
             <box-icon
               color="#111"
               className="nav-link-icon"
               name="paper-plane"
             />
             contact
-          </Link>
+          </a>
         </div>
       </nav>
     </div>

@@ -88,7 +88,7 @@ const Service = () => {
             <h3 className="service-card-title">Frontend Development</h3>
             <span
               className="service-card-subtitle"
-              onClick={() => handelView("Frontend")}>
+              onClick={() => handelView("frontend")}>
               View more
               <div className="icon">
                 <box-icon name="right-arrow-alt"></box-icon>
@@ -105,7 +105,7 @@ const Service = () => {
             <h3 className="service-card-title">Backend Development</h3>
             <span
               className="service-card-subtitle"
-              onClick={() => handelView("Backend")}>
+              onClick={() => handelView("backend")}>
               View more
               <div className="icon">
                 <box-icon name="right-arrow-alt"></box-icon>

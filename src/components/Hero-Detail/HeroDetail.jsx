@@ -9,7 +9,7 @@ const HeroDetail = () => {
   const textRef = useRef();
   useEffect(() => {
     const options = {
-      strings: ["Developer", "Designer", "Content Creator"],
+      strings: ["Developer", "Designer", "Engineer"],
       typeSpeed: 70,
       backSpeed: 60,
       backDelay: 1500,
@@ -37,10 +37,10 @@ const HeroDetail = () => {
                 <span className="gradient-text" ref={textRef}></span>
               </h2>
               <p className="home-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                autem accusamus adipisci itaque fugiat maiores quam aliquid
-                earum dolor maxime nostrum delectus pariatur eum ratione,
-                quisquam quasi illum, ipsam amet.
+                Hi, I'm a software developer passionate about creating intuitive
+                and scalable web applications. I focus on delivering seamless
+                user experiences and robust, maintainable code. Feel free to
+                check out my portfolio for more!
               </p>
               <Link className="home-link">
                 Resume <box-icon name="download" color="white"></box-icon>

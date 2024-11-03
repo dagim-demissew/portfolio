@@ -2,18 +2,19 @@ import React from "react";
 import "./projectCard.css";
 
 const ProjectCard = (props) => {
+  console.log(props.image)
   return (
     <div className="project-cards">
       <div className="project-card-image-container">
         <img
           className="project-card-image"
-          src="https://loremflickr.com/320/240"
+          src={props.image}
           alt="Project"
         />
         <div className="image-overlay"></div>
       </div>
       <div className="project-card-detail">
-        <span className="project-card-title">{props.title}</span>
+        <span className="project-card-title">{props.detail}</span>
       </div>
     </div>
   );

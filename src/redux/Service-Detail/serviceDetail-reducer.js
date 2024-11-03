@@ -1,12 +1,16 @@
 import { serviceDetailActions } from "./serviceDetail-actionTypes";
-import { SERVICES } from "../../data";
 const INITIAL_STATE = {
   displayDetails: "",
-  serviceDetails: SERVICES,
+  serviceDetails: {},
 };
 
 const serviceDetailReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case serviceDetailActions.SET_SERVICE_DATA:
+      return {
+        ...state,
+        serviceDetails: action.payload,
+      };
     case serviceDetailActions.OPEN_SERVICE_DETAIL:
       return {
         ...state,
@@ -16,6 +20,16 @@ const serviceDetailReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         displayDetails: "",
+      };
+    case serviceDetailActions.REMOVE_SERVICE:
+      return {
+        ...state,
+        serviceDetails: {
+          ...state.serviceDetails,
+          [action.payload.category]: state.serviceDetails[
+            action.payload.category
+          ].filter((item) => item.id !== action.payload.serviceId),
+        },
       };
     default:
       return state;

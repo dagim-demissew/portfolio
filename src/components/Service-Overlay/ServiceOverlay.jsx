@@ -13,7 +13,6 @@ const ServiceOverlay = (props) => {
   const handelClose = () => {
     dispatch(closeDetails());
   };
-  console.log(serviceDetails.id);
   return (
     <div
       className={`overlay-container ${
@@ -29,8 +28,8 @@ const ServiceOverlay = (props) => {
         <ul className="service-details-list">
           {serviceDetails &&
             serviceDetails.map((detail) => (
-              <li key={detail.id} className="service-detail-list-item">
-                <span>{detail.detail}</span>
+              <li key={detail.detail} className="service-detail-list-item">
+                <span>{detail.service}</span>
               </li>
             ))}
         </ul>

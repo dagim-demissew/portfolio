@@ -6,6 +6,13 @@ export const changeProjectCatagory = (change) => {
   };
 };
 
+export const setProjectData = (data) => {
+  return {
+    type: projectActionType.SET_DATA,
+    payload: data,
+  };
+};
+
 export const setNextPage = (totalPages) => {
   return {
     type: projectActionType.LOAD_NEXT_DATASET,
@@ -15,5 +22,11 @@ export const setNextPage = (totalPages) => {
 export const setPreviousPage = () => {
   return {
     type: projectActionType.LOAD_PREVIOUS_DATASET,
+  };
+};
+export const removeProject = (category, projectId) => {
+  return {
+    type: projectActionType.REMOVE_PROJECT_FROM_STATE,
+    payload: { category, projectId },
   };
 };

@@ -1,0 +1,75 @@
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-input-admin {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input-admin:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-input-file {
+  padding: 5px;
+}
+
+.form-button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+.form-button:active {
+  background-color: #004494;
+}
+.check-box {
+  display: flex;
+}
+.form-checkbox {
+  margin-left: 10px;
+}
+.button-disabled {
+  padding: 12px;
+  background: #c6c6c6;
+  color: #333;
+  cursor: not-allowed;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}

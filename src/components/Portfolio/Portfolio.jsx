@@ -5,10 +5,13 @@ import { selectItemsByActiveOption } from "../../redux/Option/option-selector";
 import Card from "../Card/Card";
 import PortfolioHeader from "../Portfolio-header/PortfolioHeader";
 import "./portfolio.css";
+import Spinner from "../Spinner/Spinner";
 
-const Portfolio = () => {
+const Portfolio = ({ isLoading }) => {
   const items = useSelector(selectItemsByActiveOption);
-  console.log(items);
+  const isFetching = useSelector((state) => state.spinner.isFetching);
+
+  console.log(items, "here");
   return (
     <div className="portfolio section">
       <div className="portfolio-container">
@@ -18,9 +21,20 @@ const Portfolio = () => {
         </div>
         <PortfolioHeader />
         <div className="portfolio-card-container">
-          {items.map((item) => (
-            <Card key={item.title} title={item.title} image={item.image} />
-          ))}
+          {isFetching ? (
+            <Spinner />
+          ) : (
+            <>
+              {items.map((item) => (
+                <Card
+                  key={item.detail}
+                  title={item.detail}
+                  image={item.image}
+                  details={item.details}
+                />
+              ))}
+            </>
+          )}
         </div>
       </div>
     </div>

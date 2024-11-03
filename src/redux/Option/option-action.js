@@ -5,3 +5,10 @@ export const setHeaderCatagory = (catagory) => {
     payload: catagory,
   };
 };
+
+export const setCategories = (data) => {
+  return {
+    type: optionActionTypes.SET_CATEGORY,
+    payload: data,
+  };
+};

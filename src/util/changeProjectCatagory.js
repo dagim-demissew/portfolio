@@ -1,4 +1,4 @@
-const projectCategories = ["Websites", "UIUX", "Mobile", "Fullstack"];
+const projectCategories = ["website", "uiux", "mobile", "fullstack"];
 
 export const changeCategory = (currentCategory, change) => {
   console.log(currentCategory);

@@ -8,3 +8,4 @@ export const selectItemsByActiveOption = createSelector(
   [selectActiveOption, selectCategories],
   (activeOption, catagories) => catagories[activeOption] || []
 );
+

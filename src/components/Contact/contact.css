@@ -17,12 +17,13 @@
   color: transparent;
 }
 .contact-form-container {
+  width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .contact-form {
-  width: 500px;
+  width: 900px;
   margin-left: 50px;
   height: 400px;
   display: flex;

@@ -1,17 +1,21 @@
 import { projectActionType } from "./project-action-type";
-import { ALL_CATEGORIES } from "../../data";
-import { calculateTotalPages } from "../../util/calculatePagination";
+  import { calculateTotalPages } from "../../util/calculatePagination";
 import { changeCategory } from "../../util/changeProjectCatagory";
 import { current } from "@reduxjs/toolkit";
 const INITIAL_STATE = {
-  currentProjectCategory: "Websites",
-  allProjects: ALL_CATEGORIES,
+  currentProjectCategory: "website",
+  allProjects: [],
   itemsPerPage: 5,
   currentPage: 1,
 };
 
 const projectReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case projectActionType.SET_DATA:
+      return {
+        ...state,
+        allProjects: action.payload,
+      };
     case projectActionType.CHANGE_CATAGORY:
       return {
         ...state,
@@ -39,6 +43,16 @@ const projectReducer = (state = INITIAL_STATE, action) => {
           currentPage: state.currentPage - 1,
         };
       }
+    case projectActionType.REMOVE_PROJECT_FROM_STATE:
+      return {
+        ...state,
+        allProjects: {
+          ...state.allProjects,
+          [action.payload.category]: state.allProjects[action.payload.category].filter(
+            (item) => item.id !== action.payload.projectId
+          ),
+        },
+      };
     default:
       return {
         ...state,

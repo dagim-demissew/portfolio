@@ -1,9 +1,8 @@
-import { CATEGORIES } from "../../data";
 import { optionActionTypes } from "./option-action-type";
 
 const INITIAL_STATE = {
-  activeOption: "Websites",
-  categories: CATEGORIES,
+  activeOption: "website",
+  categories: {},
 };
 
 const optionReducer = (state = INITIAL_STATE, action) => {
@@ -12,6 +11,11 @@ const optionReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         activeOption: action.payload,
+      };
+    case optionActionTypes.SET_CATEGORY:
+      return {
+        ...state,
+        categories: action.payload,
       };
     default:
       return state;

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setHeaderCatagory } from "../../redux/Option/option-action";
 import "./portfolioHeader.css";
 
-const PortfolioHeader = () => {
+const PortfolioHeader = (props) => {
   const dispatch = useDispatch();
   const activeCatagory = useSelector((state) => state.option.activeOption);
   const handleOptionClick = (option) => {
@@ -15,35 +15,39 @@ const PortfolioHeader = () => {
       <div className="portfolio-header-options">
         <div
           className={`portfolio-header-option ${
-            activeCatagory === "Websites" ? "option-active" : ""
+            activeCatagory === "website" ? "option-active" : ""
           }`}
-          onClick={() => handleOptionClick("Websites")}>
+          onClick={() => handleOptionClick("website")}>
           Websites
         </div>
         <div
           className={`portfolio-header-option ${
-            activeCatagory === "UIUX" ? "option-active" : ""
+            activeCatagory === "uiux" ? "option-active" : ""
           }`}
-          onClick={() => handleOptionClick("UIUX")}>
+          onClick={() => handleOptionClick("uiux")}>
           UI/UX
         </div>
         <div
           className={`portfolio-header-option ${
-            activeCatagory === "Mobile" ? "option-active" : ""
+            activeCatagory === "mobile" ? "option-active" : ""
           }`}
-          onClick={() => handleOptionClick("Mobile")}>
+          onClick={() => handleOptionClick("mobile")}>
           Mobile
         </div>
         <div
           className={`portfolio-header-option ${
-            activeCatagory === "Fullstack" ? "option-active" : ""
+            activeCatagory === "fullstack" ? "option-active" : ""
           }`}
-          onClick={() => handleOptionClick("Fullstack")}>
+          onClick={() => handleOptionClick("fullstack")}>
           Fullstack
         </div>
-        <Link className="portfolio-link">
-          <div className="portfolio-header-option">more?</div>
-        </Link>
+        {props.admin ? (
+          <></>
+        ) : (
+          <Link className="portfolio-link" to="/projects">
+            <div className="portfolio-header-option">more?</div>
+          </Link>
+        )}
       </div>
     </div>
   );
