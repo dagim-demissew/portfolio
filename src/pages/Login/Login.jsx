@@ -10,6 +10,7 @@ const Login = () => {
     username: "",
     password: "",
   });
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -39,8 +40,8 @@ const Login = () => {
       );
       navigate("/admin");
     } catch (error) {
-      console.log(error);
-      //show error message
+      console.log(error.response.data);
+      setError(error.response.data.message);
     }
   };
   return (
@@ -84,6 +85,7 @@ const Login = () => {
             Login
           </button>
         </form>
+        {error ? <span className="err-msg">{error}</span> : <></>}
       </div>
     </div>
   );

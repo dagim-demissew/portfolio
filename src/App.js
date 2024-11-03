@@ -7,6 +7,7 @@ import Projects from "./pages/ProjectsPage/Projects.jsx";
 import Login from "./pages/Login/Login.jsx";
 import "./App.css";
 import { useSelector } from "react-redux";
+import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 
 function App() {
   const admin = useSelector((state) => state.user.userData);
@@ -15,6 +16,7 @@ function App() {
     routes = (
       <>
         <Route path="/admin/*" element={<Admin />} />
+        <Route path="/*" element={<ErrorPage />} />
       </>
     );
   } else {
@@ -23,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/*" element={<ErrorPage />} />
       </>
     );
   }

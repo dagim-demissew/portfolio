@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useRef } from "react";
 import portfolioImage from "../../assets/dagimPortfolio.jpg";
 import Typed from "typed.js";
-import { Link } from "react-router-dom";
+import myCV from '../../assets/Dagim_CV.pdf';
 import "./heroDetail.css";
 
 const HeroDetail = () => {
@@ -42,9 +42,12 @@ const HeroDetail = () => {
                 user experiences and robust, maintainable code. Feel free to
                 check out my portfolio for more!
               </p>
-              <Link className="home-link">
+              <a
+                className="home-link"
+                href={myCV}
+                download="Dagim_Demissew_CV.pdf">
                 Resume <box-icon name="download" color="white"></box-icon>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

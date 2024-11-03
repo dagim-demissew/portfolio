@@ -6,11 +6,11 @@ const Card = (props) => {
   return (
     <div className="portfolio-card">
       <img className="portfolio-image" src={props.image} alt="" />
-      <Link>
+      <a target="blank" href={props.link}>
         <div className="portfolio-detail">
           <span className="portfolio-card-title ">{props.details}</span>
         </div>
-      </Link>
+      </a>
     </div>
   );
 };

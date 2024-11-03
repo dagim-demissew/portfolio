@@ -17,7 +17,6 @@ const Projects = () => {
   const dispatch = useDispatch();
 
   const isFetching = useSelector((state) => state.spinner.isFetching);
-  console.log(isFetching);
 
   const currentProject = useSelector(
     (state) => state.project.currentProjectCategory
@@ -46,7 +45,6 @@ const Projects = () => {
       serviceData = await axiosInstance.get("/servies");
       categoryData = await axiosInstance.get("/projectsMain");
       dispatch(setProjectData(projectData.data));
-      console.log(projectData.data, "here");
       dispatch(setFetching(false));
     };
     try {
@@ -56,7 +54,6 @@ const Projects = () => {
     }
   }, []);
 
-  console.log(projects, "here");
   return (
     <div className="project-container">
       <div className="projects">
@@ -80,7 +77,12 @@ const Projects = () => {
           ) : (
             <>
               {projects.map((project) => (
-                <ProjectCard key={project.detail} image={project.image} detail={project.details} />
+                <ProjectCard
+                  key={project.detail}
+                  link={project.link}
+                  image={project.image}
+                  detail={project.details}
+                />
               ))}
             </>
           )}

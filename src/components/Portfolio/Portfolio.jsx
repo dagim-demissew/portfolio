@@ -10,8 +10,6 @@ import Spinner from "../Spinner/Spinner";
 const Portfolio = ({ isLoading }) => {
   const items = useSelector(selectItemsByActiveOption);
   const isFetching = useSelector((state) => state.spinner.isFetching);
-
-  console.log(items, "here");
   return (
     <div className="portfolio section">
       <div className="portfolio-container">
@@ -30,6 +28,7 @@ const Portfolio = ({ isLoading }) => {
                   key={item.detail}
                   title={item.detail}
                   image={item.image}
+                  link={item.link}
                   details={item.details}
                 />
               ))}

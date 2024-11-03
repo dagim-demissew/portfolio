@@ -7,6 +7,12 @@
   background: #00000082;
   z-index: 1000;
 }
+.err-msg{
+  color: red;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
 .login-container {
   background-color: #fff;
   padding: 40px;

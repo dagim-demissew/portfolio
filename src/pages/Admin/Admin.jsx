@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { resetUserData } from "../../redux/User/user-actions";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { setServiceData } from "../../redux/Service-Detail/serviceDetail-actions";
 import { setProjectData } from "../../redux/Project/project-action";
 import { setFetching } from "../../redux/Spinner/spinner-action";
 import ServiceTable from "../../components/ServicesTable/ServiceTable";
+import ErrorPage from "../../components/ErrorPage/ErrorPage";
 import AdminForm from "../../components/Admin-form/AdminForm";
 import Table from "../../components/Table/Table";
 import AddServices from "../../components/Admin-service/AddServices";
@@ -18,22 +18,23 @@ const Admin = () => {
   const handleSelect = (option) => {
     setActiveItem(option);
   };
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const admin = useSelector((state) => state.user.userData);
   const handleLogout = () => {
     dispatch(resetUserData());
-    navigate("/");
   };
   useEffect(() => {
     let projectData;
     let serviceData;
     const fetchData = async () => {
-      dispatch(setFetching(true));
-      projectData = await axiosInstance.get("/projects");
-      serviceData = await axiosInstance.get("/admin/servies");
-      dispatch(setServiceData(serviceData.data));
-      dispatch(setProjectData(projectData.data));
-      dispatch(setFetching(false));
+      if (admin) {
+        dispatch(setFetching(true));
+        projectData = await axiosInstance.get("/projects");
+        serviceData = await axiosInstance.get("/admin/servies");
+        dispatch(setServiceData(serviceData.data));
+        dispatch(setProjectData(projectData.data));
+        dispatch(setFetching(false));
+      } else return;
     };
     try {
       fetchData();
@@ -81,11 +82,11 @@ const Admin = () => {
               Services
             </li>
           </Link>
-          <Link className="admin-link">
+          <a href="/" className="admin-link">
             <li className="admin-list-items" onClick={handleLogout}>
               Logout
             </li>
-          </Link>
+          </a>
         </ul>
       </div>
       <div className="admin-details">
@@ -95,6 +96,7 @@ const Admin = () => {
           <Route path="/edit/:pid" element={<AdminForm />} />
           <Route path="/addService" element={<AddServices />} />
           <Route path="/AllServices" element={<ServiceTable />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </div>
     </div>
