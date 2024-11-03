@@ -3,7 +3,7 @@ import { changeCategory } from "../../util/changeProjectCatagory";
 const INITIAL_STATE = {
   currentProjectCategory: "website",
   allProjects: [],
-  itemsPerPage: 5,
+  itemsPerPage: 4,
   currentPage: 1,
 };
 

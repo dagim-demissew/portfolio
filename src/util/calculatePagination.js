@@ -1,3 +1,3 @@
-export const calculateTotalPages = (categoryData, pageSize = 5) => {
+export const calculateTotalPages = (categoryData, pageSize = 4) => {
   return Math.ceil(categoryData.length / pageSize);
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { resetUserData } from "../../redux/User/user-actions";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,9 +15,9 @@ import "./admin.css";
 
 const Admin = () => {
   const [activeItem, setActiveItem] = useState(0);
-  const handleSelect = (option) => {
+  const handleSelect = useCallback((option) => {
     setActiveItem(option);
-  };
+  });
   const dispatch = useDispatch();
   const admin = useSelector((state) => state.user.userData);
   const handleLogout = () => {
