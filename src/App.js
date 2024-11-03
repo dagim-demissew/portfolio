@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import Socials from "./components/Socials/Socials";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Admin from "./pages/Admin/Admin.jsx";
 import Home from "./pages/HomePage/Home.jsx";
 import Projects from "./pages/ProjectsPage/Projects.jsx";

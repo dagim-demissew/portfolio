@@ -90,7 +90,6 @@ const AdminForm = () => {
       console.log("could not create project.", error);
     }
   };
-
   return (
     <div className="admin-form-container">
       <form
@@ -100,19 +99,25 @@ const AdminForm = () => {
         encType="multipart/form-data">
         <div className="form-group">
           <label htmlFor="title" className="form-label">
-            Project Title:
+            Project title:
           </label>
-          <input
-            type="text"
+          <select
             id="title"
             name="title"
             className="form-input-admin"
             value={formData.title}
-            placeholder="Enter title"
             onChange={handleChange}
-            required
-          />
+            required>
+            <option value="" disabled>
+              Select title
+            </option>
+            <option value="mobile">Mobile</option>
+            <option value="website">Website</option>
+            <option value="uiux">UI/UX</option>
+            <option value="fullstack">Fullstack</option>
+          </select>
         </div>
+
         <div className="form-group">
           <label htmlFor="details" className="form-label">
             Project Details:

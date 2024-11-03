@@ -14,11 +14,11 @@ const Table = () => {
   const handleDelete = async (projectID, category) => {
     dispatch(removeProject(category, projectID));
     try {
-      const response = await axiosInstance.post(`/admin/delete/${projectID}`, {
+      await axiosInstance.post(`/admin/delete/${projectID}`, {
         title: category,
       });
     } catch (error) {
-      console.log("an error occured while deleting", error);
+      console.log("an error occured while deleting");
     }
   };
 

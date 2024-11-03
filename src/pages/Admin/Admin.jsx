@@ -41,7 +41,7 @@ const Admin = () => {
     } catch (error) {
       console.log(error);
     }
-  }, [handleSelect]);
+  }, [handleSelect, admin, dispatch]);
   return (
     <div className="admin-container">
       <div className="admin-sidebar">
@@ -70,7 +70,7 @@ const Admin = () => {
                 activeItem === 3 ? "admin-active-option" : ""
               }`}
               onClick={() => handleSelect(3)}>
-              Add Service
+              Service
             </li>
           </Link>
           <Link to={"/admin/AllServices"} className="admin-link">

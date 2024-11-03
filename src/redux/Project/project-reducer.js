@@ -1,7 +1,5 @@
 import { projectActionType } from "./project-action-type";
-  import { calculateTotalPages } from "../../util/calculatePagination";
 import { changeCategory } from "../../util/changeProjectCatagory";
-import { current } from "@reduxjs/toolkit";
 const INITIAL_STATE = {
   currentProjectCategory: "website",
   allProjects: [],

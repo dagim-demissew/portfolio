@@ -27,7 +27,7 @@ const HeroDetail = () => {
         <div className="hero-content">
           <div className="hero-detail-container">
             <div className="hero-image-container">
-              <img className="hero-image" src={portfolioImage} />
+              <img alt="" className="hero-image" src={portfolioImage} />
             </div>
             <div className="hero-detail">
               <h1 className="home-title">

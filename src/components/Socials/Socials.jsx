@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "./socials.css";
 
 const Socials = () => {
@@ -14,18 +13,21 @@ const Socials = () => {
         <div className={`social-links ${toggle ? "roll" : ""}`}>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/dagim-demissew-787b4927b/"
             className="social-link linkedin">
             <box-icon name="linkedin" color="white" type="logo"></box-icon>
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/dagim-demissew"
             className="social-link git">
             <box-icon name="github" color="white" type="logo"></box-icon>
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://wa.me/965701286"
             className="social-link whatsup">
             <box-icon name="whatsapp" color="white" type="logo"></box-icon>
@@ -33,6 +35,7 @@ const Socials = () => {
           <a
             href="https://t.me/Adonai_27"
             target="_blank"
+            rel="noreferrer"
             className="social-link telegram">
             <box-icon type="logo" name="telegram" color="white"></box-icon>
           </a>

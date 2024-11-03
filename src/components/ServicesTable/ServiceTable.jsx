@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { setProjectData } from "../../redux/Project/project-action";
 import { removeService } from "../../redux/Service-Detail/serviceDetail-actions";
 import axiosInstance from "../../util/axiosInstance";
 import "./serviceTable.css";
@@ -14,9 +13,7 @@ const ServiceTable = () => {
   const handleDelete = async (category, serviceId) => {
     dispatch(removeService(category, serviceId));
     try {
-      const response = await axiosInstance.delete(
-        `/admin/deleteService/${serviceId}`
-      );
+      await axiosInstance.delete(`/admin/deleteService/${serviceId}`);
     } catch (error) {
       console.log("an error occured while deleting", error);
     }

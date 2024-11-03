@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import axiosInstance from "../../util/axiosInstance.js";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { setServiceData } from "../../redux/Service-Detail/serviceDetail-actions";
 import { setProjectData } from "../../redux/Project/project-action";
 import { setCategories } from "../../redux/Option/option-action.js";
@@ -38,7 +37,7 @@ const Home = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <Navbar />

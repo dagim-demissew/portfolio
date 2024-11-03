@@ -1,11 +1,11 @@
 .project-cards {
   margin: 10px;
-  width: 220px;
-  height: 280px;
+  width: 280px;
+  height: 220px;
   background-color: #fdfdfd;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
   display: flex;

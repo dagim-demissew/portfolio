@@ -37,13 +37,9 @@ const Projects = () => {
 
   useEffect(() => {
     let projectData;
-    let serviceData;
-    let categoryData;
     const fetchData = async () => {
       dispatch(setFetching(true));
       projectData = await axiosInstance.get("/projects");
-      serviceData = await axiosInstance.get("/servies");
-      categoryData = await axiosInstance.get("/projectsMain");
       dispatch(setProjectData(projectData.data));
       dispatch(setFetching(false));
     };
@@ -52,7 +48,7 @@ const Projects = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="project-container">

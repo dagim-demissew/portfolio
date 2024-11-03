@@ -6,11 +6,10 @@ import FormTextArea from "../FormInput/FormTextArea";
 import "./contact.css";
 
 const Contact = () => {
- 
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY); 
+    emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
   }, []);
 
   const handleChange = (e) => {
@@ -24,7 +23,7 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const formData = {
       user_email: email,
@@ -32,7 +31,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await emailjs.send(
+      await emailjs.send(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         formData,

@@ -45,19 +45,23 @@ const AddServices = () => {
         method="POST"
         enctype="multipart/form-data">
         <div className="form-group">
-          <label htmlFor="title" className="form-label">
-            Service Title:
+          <label htmlFor="serviceTitle" className="form-label">
+            Service Type:
           </label>
-          <input
-            type="text"
-            id="title"
+          <select
+            id="serviceTitle"
             name="title"
             className="form-input-admin"
             onChange={handleChange}
             value={serviceData.title}
-            placeholder="Enter title"
-            required
-          />
+            required>
+            <option value="" disabled>
+              Select service type
+            </option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="uiux">UI/UX</option>
+          </select>
         </div>
         <div className="form-group">
           <label htmlFor="title" className="form-label">
