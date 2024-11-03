@@ -15,10 +15,11 @@ const ServiceOverlay = (props) => {
   };
   return (
     <div
+      onClick={handelClose}
       className={`overlay-container ${
         displayDetails ? "display-service-detail" : "exit-service-detail"
       }`}>
-      <div className="service-details">
+      <div className="service-details" >
         <span className="service-detail-close-icon" onClick={handelClose}>
           <box-icon color="#888" name="x-circle"></box-icon>
         </span>
