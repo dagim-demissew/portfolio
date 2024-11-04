@@ -6,7 +6,7 @@ import PortfolioHeader from "../Portfolio-header/PortfolioHeader";
 import "./portfolio.css";
 import Spinner from "../Spinner/Spinner";
 
-const Portfolio = ({ isLoading }) => {
+const Portfolio = () => {
   const items = useSelector(selectItemsByActiveOption);
   const isFetching = useSelector((state) => state.spinner.isFetching);
   return (

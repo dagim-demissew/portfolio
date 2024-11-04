@@ -21,6 +21,7 @@ export const selectPaginatedProjectsByCategory = createSelector(
     return {
       projects: allProjectsInCategory.slice(start, end),
       totalPages,
+      currentPage,
     };
   }
 );

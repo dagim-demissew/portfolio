@@ -9,6 +9,8 @@
   bottom: 10px;
   left: 50px;
   transition: transform 0.3s ease;
+  z-index: 2000;
+
 }
 
 .socila-close {
@@ -63,6 +65,7 @@
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 0.3s ease, transform 0.3s ease;
+
 }
 
 .roll {
@@ -91,6 +94,7 @@
   opacity: 1;
   transform: translateY(-10px);
   position: static;
+  
 }
 
 /* Specific background colors */

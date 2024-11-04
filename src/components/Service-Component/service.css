@@ -3,11 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
   width: 80%;
   margin-top: 50px;
 }
 .service-title {
   padding: 10px;
+  margin-bottom: 10px;
   font-weight: 700;
   background-image: linear-gradient(45deg, #6a5acd, #00bfff);
   -webkit-background-clip: text;
@@ -107,6 +109,10 @@
   }
 }
 @media (max-width: 615px) {
+  .service-title{
+  margin-bottom: 100px;
+
+  }
   .service-dots {
     width: 40px;
     height: 20px;
